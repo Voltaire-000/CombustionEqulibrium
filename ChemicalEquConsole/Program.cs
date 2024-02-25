@@ -11,6 +11,10 @@ JObject jObj = JObject.Parse(json);
 //Func<JToken, bool> filter = r => (bool)r[key: "gaseous"] == false;
 //Func<JToken, bool> filter = r => (double)r[key: "molecularWeight"] <= 25.0;
 
+Func<JToken, bool> filter = r => (bool)r[key: "gaseous"] == false && (string)r["reactant"] == "CH4" 
+    || (string)r["reactant"] == "CO" || (string)r["reactant"] == "CO2"; ;
+
+
 // apply the filter to the JObject and get the filtered records as a JArray
 JArray filtered = new JArray(jObj["thermo"].Where(filter));
 
