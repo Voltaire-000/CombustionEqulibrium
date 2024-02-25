@@ -11,4 +11,13 @@
     <PackageReference Include="Sprache" Version="2.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="shortThermo.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="thermoINPjson.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
